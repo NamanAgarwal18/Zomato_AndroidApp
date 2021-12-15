@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/teal_700"
+        app:contentPadding="10dp"
+        tools:layout_editor_absoluteX="-44dp"
+        tools:layout_editor_absoluteY="5dp">
+
+
+        <RelativeLayout
+            android:id="@+id/RL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvRestaurantNameRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beyond Flavours"
+                android:layout_toLeftOf="@id/tvCostRes"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/tvTimimgRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvRestaurantNameRes"
+                android:text="12:00PM - 11:00PM"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvCostRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btnDeleteRes"
+                android:paddingRight="5sp"
+                android:paddingTop="5sp"
+                android:text="(800 For 2)"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/btnDeleteRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Del"
+                tools:ignore="NotSibling"
+
+                />
+
+            <Button
+                android:id="@+id/btnEditRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnDeleteRes"
+                android:layout_alignParentRight="true"
+                android:text="Edit"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/tvCuisineRes"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTimimgRes"
+                android:paddingTop="2sp"
+                android:text="Chinese, Continental, South Indian, North Indian"
+
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                tools:ignore="NotSibling" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/RLUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etRestaurantNameRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beyond Flavours"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:textAlignment="center"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCostRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etRestaurantNameRes"
+                android:inputType="number"
+                android:paddingLeft="10sp"
+                android:paddingTop="12sp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:textAlignment="center"
+                android:text="800"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/etStartTimimgRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etCostRes"
+                android:inputType="time"
+                android:layout_marginLeft="60dp"
+                android:text="12:00"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etCostRes"
+                android:layout_toRightOf="@id/etStartTimimgRes"
+                android:layout_toLeftOf="@id/etEndTimimgRes"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/etEndTimimgRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etCostRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dp"
+                android:inputType="time"
+                android:text="23:00"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+
+
+            <Button
+                android:id="@+id/etChineseRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEndTimimgRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="Chinese" />
+
+            <Button
+                android:id="@+id/etAmericanRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etEndTimimgRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="American" />
+
+            <Button
+                android:id="@+id/etArabianRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etChineseRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="Arabian" />
+
+            <Button
+                android:id="@+id/etBakeryRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAmericanRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="Bakery" />
+
+            <Button
+                android:id="@+id/etNorthIndianRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etArabianRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="North Indian" />
+
+            <Button
+                android:id="@+id/etSouthIndian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etBakeryRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="South Indian" />
+
+            <Button
+                android:id="@+id/etAsianRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etNorthIndianRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="Asian" />
+
+            <Button
+                android:id="@+id/etSeaFoodRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etSouthIndian"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="Sea Food" />
+
+
+            <Button
+                android:id="@+id/etBiryaniRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etAsianRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="Biryani" />
+
+            <Button
+                android:id="@+id/etCafeRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etSeaFoodRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="Cafe" />
+
+            <Button
+                android:id="@+id/etFastFoodRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etBiryaniRes"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+
+                android:backgroundTint="@color/purple_700"
+                android:text="Fast Food" />
+
+            <Button
+                android:id="@+id/etContinentalRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etCafeRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/purple_700"
+                android:text="Continental" />
+
+            <Button
+                android:layout_marginTop="20sp"
+                android:id="@+id/etBackRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etFastFoodRes"
+                android:textSize="20sp"
+                android:layout_marginStart="50dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:textStyle="bold"
+
+                android:backgroundTint="@color/black"
+                android:text="Back" />
+
+            <Button
+                android:layout_marginTop="20sp"
+                android:id="@+id/etUpdateRes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etContinentalRes"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="2dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="2dp"
+                android:backgroundTint="@color/black"
+                android:text="Update" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
